@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <style>
+    text {
+      font-family: serif;
+      font-weight: 900;
+      fill: #0F172A;
+    }
+  </style>
+  <!-- Background circle to help visibility if needed, or transparent -->
+  <rect width="500" height="500" rx="100" fill="#ffffff"/> 
+  <!-- Fitting the text diagonally or centered might be the only way to make it "big" -->
+  <text x="50%" y="55%" font-size="90" text-anchor="middle" dominant-baseline="middle">Eloqaura</text>
+</svg>
