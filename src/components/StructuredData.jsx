@@ -25,7 +25,14 @@ const organizationSchema = {
     "contactType": "customer service",
     "email": "kiranlingaraj@eloqaura.com"
   },
-  "sameAs": []
+  "sameAs": [],
+  "founder": {
+    "@type": "Person",
+    "name": "Kiran Lingaraj",
+    "email": "kiranlingaraj@eloqaura.com",
+    "jobTitle": "Founder & Lead Coach",
+    "knowsAbout": ["Communication training", "Executive coaching", "Public speaking", "Leadership development", "Organisational communication"]
+  }
 };
 
 const websiteSchema = {
@@ -56,6 +63,45 @@ const localBusinessSchema = {
   ]
 };
 
+const serviceSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Executive Communication Coaching",
+    "provider": { "@type": "Organization", "name": "Eloqaura" },
+    "description": "One-on-one coaching for senior leaders covering Clarity in Action, Power-Vulnerability Matrix, Leadership Presence Lab, and Influence Under Pressure.",
+    "areaServed": { "@type": "Country", "name": "India" },
+    "serviceType": "Executive Coaching"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Team Communication Workshops",
+    "provider": { "@type": "Organization", "name": "Eloqaura" },
+    "description": "Workshops for teams including The Listening Lab, Conflict to Collaboration, Signals & Stories, Decision-Making Dialogues, and The Clarity Sprint.",
+    "areaServed": { "@type": "Country", "name": "India" },
+    "serviceType": "Team Training"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Public Speaking Mastery",
+    "provider": { "@type": "Organization", "name": "Eloqaura" },
+    "description": "Coaching tracks for presence, storytelling, vocal influence, stage simulation, and persuasion.",
+    "areaServed": { "@type": "Country", "name": "India" },
+    "serviceType": "Public Speaking Training"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Customised Training Programs",
+    "provider": { "@type": "Organization", "name": "Eloqaura" },
+    "description": "Bespoke programs including Needs Discovery Sprint, Tailored Curriculum Design, Immersive Delivery Models, and Impact Mapping.",
+    "areaServed": { "@type": "Country", "name": "India" },
+    "serviceType": "Custom Training"
+  }
+];
+
 const breadcrumbSchema = (pathname) => {
   const parts = pathname.split('/').filter(Boolean);
   if (parts.length === 0) return null;
@@ -81,7 +127,7 @@ const StructuredData = () => {
   const { pathname } = useLocation();
   const breadcrumbs = breadcrumbSchema(pathname);
 
-  const schemas = [organizationSchema, websiteSchema, localBusinessSchema];
+  const schemas = [organizationSchema, websiteSchema, localBusinessSchema, ...serviceSchemas];
   if (breadcrumbs) schemas.push(breadcrumbs);
 
   return (
