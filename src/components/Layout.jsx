@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import ChatWidget from './ChatWidget';
 import SEOHead from './SEOHead';
+import StructuredData from './StructuredData';
 import { Outlet, useLocation } from 'react-router-dom';
 import { pageMeta } from '../lib/seo';
 
@@ -25,6 +26,7 @@ const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-white text-slate-800">
       <SEOHead title={meta.title} description={meta.description} canonical={pathname} />
+      <StructuredData />
       <Navbar />
       <main className="flex-grow">
         <Outlet />
