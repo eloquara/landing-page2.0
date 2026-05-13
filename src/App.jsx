@@ -25,6 +25,7 @@ const FindYourVoicePage = lazy(() => import('./pages/FindYourVoicePage'));
 const IndividualTransformationPage = lazy(() => import('./pages/IndividualTransformationPage'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./pages/TermsOfService'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Loading Spinner Component
 const PageLoader = () => (
@@ -97,6 +98,7 @@ function App() {
             <Route path="/impact/case-study/:id" element={<CaseStudyDetail />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
           {/* Roadmap Page without Layout for full immersion, or wrapped if preferred. Let's keep it separate for the 'Dark Mode' vibe */}
           <Route path="/methodology/roadmap" element={<RoadmapPage />} />
