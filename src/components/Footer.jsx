@@ -66,8 +66,8 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
           <p>&copy; {new Date().getFullYear()} {siteData.site.name}. All rights reserved.</p>
           <div className="flex space-x-8 mt-4 md:mt-0">
-            <span className="cursor-default">Privacy Policy</span>
-            <span className="cursor-default">Terms of Service</span>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

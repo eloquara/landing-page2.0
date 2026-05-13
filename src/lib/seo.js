@@ -67,4 +67,12 @@ export const pageMeta = {
     title: 'Methodology Roadmap — Observe, Identify, Design, Practice, Integrate',
     description: 'Explore Eloqaura\'s complete cognitive roadmap: a five-phase methodology from observation to integration.',
   },
+  '/privacy': {
+    title: 'Privacy Policy',
+    description: 'Eloqaura does not process any public data. Our privacy policy outlines how we handle personal information shared during direct training engagements.',
+  },
+  '/terms': {
+    title: 'Terms of Service',
+    description: 'Terms governing Eloqaura\'s communication training, executive coaching, and workshop services. Includes confidentiality, IP rights, and cancellation policies.',
+  },
 };
