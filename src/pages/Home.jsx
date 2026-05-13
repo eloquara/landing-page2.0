@@ -44,9 +44,10 @@ const Home = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
                       <img 
                         src="/images/corporate-meeting.webp" 
-                        alt="Corporate meeting" 
+                        alt="Executive leaders in a modern corporate meeting room engaged in strategic discussion"
                         className="object-cover h-full w-full opacity-95 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
                         loading="eager"
+                        fetchpriority="high"
                       />
                       <div className="absolute bottom-8 left-8 z-20 text-white">
                         <p className="font-serif text-2xl italic">"Clarity is power."</p>
