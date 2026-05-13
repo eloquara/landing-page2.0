@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist && curl -s -o /dev/null -w '%{http_code}' 'https://www.bing.com/indexnow?url=https://www.eloqaura.com&key=e1ca215e-2d2c-44c1-8cb2-4d13d82aef56'"
   },
   "dependencies": {
     "lucide-react": "^0.300.0",
