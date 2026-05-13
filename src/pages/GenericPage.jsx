@@ -1,8 +1,10 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead';
 
 const GenericPage = ({ title, subtitle, children }) => {
   return (
     <div className="pt-16 pb-24">
+      <SEOHead title={title} description={subtitle} noindex={true} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold text-brand-navy mb-6">{title}</h1>

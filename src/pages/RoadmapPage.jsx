@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import { Microscope, Target, PenTool, Zap, RotateCw, ArrowLeft } from 'lucide-react';
 
 const ProcessingView = () => (
@@ -91,6 +92,8 @@ const RoadmapPage = () => {
 
   return (
     <div className="bg-white min-h-screen font-sans text-slate-600 overflow-hidden flex flex-col">
+      
+      <SEOHead title="Methodology Roadmap — Observe, Identify, Design, Practice, Integrate" description="Explore Eloqaura's complete cognitive roadmap: a five-phase methodology from observation to integration." canonical="/methodology/roadmap" />
       
       {/* Background Texture */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.4] pointer-events-none"></div>
